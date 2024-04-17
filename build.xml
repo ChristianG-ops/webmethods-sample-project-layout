@@ -37,6 +37,7 @@
         <property name="testPackageNamePattern" value="*_Test"/>
         <property name="jenkinsReportDir" value="${workspace.dir}/report"/>
 
+<!-- You need to create the Enviroment Variables-->
 
 	<target name="buildDeployTest" depends="">
         	<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="buildDeployTest" inheritAll="true"/>
