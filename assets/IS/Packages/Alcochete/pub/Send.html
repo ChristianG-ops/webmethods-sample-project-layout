@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send order</title>
+</head>
+<body>
+   <!--Table Style--> 
+   <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    .th2 {
+      border: 1px solid #dddddd;
+      font-family: arial, sans-serif;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .btn{
+        width: 100%;
+        border: 1px solid #2a1ab8;
+      font-family: arial black, sans-serif;
+      text-align: center;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #58d0ff49;
+    }
+    </style>
+   <!--Table Style--> 
+    <h1 class="th2">Send order to Tiago's Company</h1>
+    <form action="connect.dsp" method="get">
+    
+    
+            <!--Table-->
+            <table>
+                <tr>
+                    <th colspan="2" class="th2">Complete the form</th>
+                 </tr>
+                  <tr>
+                    <td>REFERENCE:</td>
+                    <td><input type="text" class="th2" name="reference" required></td>
+                  </tr>
+                  <tr>
+                    <td>HDD:</td>
+                    <td><select id="hdd" class="th2" name="hdd">
+                        <option value="128">128G</option>
+                        <option value="256">256G</option>
+                        <option value="512">512G</option>
+                        <option value="1000">1T</option>
+                        <option value="2000">2T</option>
+                        <option value="6000">6T</option>
+                        <option value="8000">8T</option>        
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td><input type="text" class="th2"  name="ram" required></td>
+                  </tr>
+                  <tr>
+                    <td>ADITIONAL</td>
+                    <td><input type="text" class="th2"  name="accesories" required></td>
+                  </tr> 
+                  <tr>
+                      <th colspan="2"><input  type="hidden" name="action" value="connect">
+                        <input type="submit" class="btn" value="SEND ORDER"></th>
+                    </tr> 
+                   
+            </table>
+            <!--Table-->
+         
+        
+    </form>
+</body>
+</html>

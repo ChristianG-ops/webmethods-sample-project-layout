@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ProviderMath" targetNamespace="http://192.168.1.4/wsSOAP_WSDL.Provider_MathOperations.ws:ProviderMath" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://192.168.1.4/wsSOAP_WSDL.Provider_MathOperations.ws:ProviderMath" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+      
+    <wsdl:types>
+            
+        <xsd:schema targetNamespace="http://192.168.1.4/wsSOAP_WSDL.Provider_MathOperations.ws:ProviderMath" xmlns:tns="http://192.168.1.4/wsSOAP_WSDL.Provider_MathOperations.ws:ProviderMath" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                      
+            <xsd:element name="mathOperations" type="tns:mathOperations"/>
+                      
+            <xsd:element name="mathOperationsResponse" type="tns:mathOperationsResponse"/>
+                      
+            <xsd:complexType name="mathOperations">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="Inputs" nillable="true" type="tns:mathInput"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="mathInput">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="addition" nillable="true" type="tns:addition"/>
+                                  
+                    <xsd:element name="susbtract" nillable="true" type="tns:susbtract"/>
+                                  
+                    <xsd:element name="divition" nillable="true" type="tns:divition"/>
+                                  
+                    <xsd:element name="multiply" nillable="true" type="tns:multiply"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="addition">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="number1" nillable="true" type="xsd:string"/>
+                                  
+                    <xsd:element name="number2" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="susbtract">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="number1" nillable="true" type="xsd:string"/>
+                                  
+                    <xsd:element name="number2" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="divition">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="number1" nillable="true" type="xsd:string"/>
+                                  
+                    <xsd:element name="number2" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="multiply">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="number1" nillable="true" type="xsd:string"/>
+                                  
+                    <xsd:element name="number2" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="mathOperationsResponse">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="Outputs" nillable="true" type="tns:mathOutput"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="mathOutput">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="addition" nillable="true" type="tns:addition2"/>
+                                  
+                    <xsd:element name="susbtract" nillable="true" type="tns:susbtract2"/>
+                                  
+                    <xsd:element name="divition" nillable="true" type="tns:divition2"/>
+                                  
+                    <xsd:element name="multiply" nillable="true" type="tns:multiply2"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="addition2">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="result" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="susbtract2">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="result" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="divition2">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="result" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                      
+            <xsd:complexType name="multiply2">
+                            
+                <xsd:sequence>
+                                  
+                    <xsd:element name="result" nillable="true" type="xsd:string"/>
+                                
+                </xsd:sequence>
+                          
+            </xsd:complexType>
+                    	
+        </xsd:schema>
+          
+    </wsdl:types>
+      
+    <wsdl:message name="ProviderMath_PortType_mathOperations">
+            
+        <wsdl:part name="parameters" element="tns:mathOperations">
+    </wsdl:part>
+          
+    </wsdl:message>
+      
+    <wsdl:message name="ProviderMath_PortType_mathOperationsResponse">
+            
+        <wsdl:part name="parameters" element="tns:mathOperationsResponse">
+    </wsdl:part>
+          
+    </wsdl:message>
+      
+    <wsdl:portType name="ProviderMath_PortType">
+            
+        <wsdl:operation name="mathOperations">
+                  
+            <wsdl:input message="tns:ProviderMath_PortType_mathOperations">
+    </wsdl:input>
+                  
+            <wsdl:output message="tns:ProviderMath_PortType_mathOperationsResponse">
+    </wsdl:output>
+                
+        </wsdl:operation>
+          
+    </wsdl:portType>
+      
+    <wsdl:binding name="wsSOAP_WSDL_Provider_MathOperations_ws_ProviderMath_Binder" type="tns:ProviderMath_PortType">
+            
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+            
+        <wsdl:operation name="mathOperations">
+                  
+            <soap:operation soapAction="wsSOAP_WSDL_Provider_MathOperations_ws_ProviderMath_Binder_mathOperations" style="document"/>
+                  
+            <wsdl:input>
+                        
+                <soap:body parts="parameters" use="literal"/>
+                      
+            </wsdl:input>
+                  
+            <wsdl:output>
+                        
+                <soap:body parts="parameters" use="literal"/>
+                      
+            </wsdl:output>
+                
+        </wsdl:operation>
+          
+    </wsdl:binding>
+      
+    <wsdl:service name="wsSOAP_WSDL.Provider_MathOperations.ws.ProviderMath">
+            
+        <wsdl:port name="wsSOAP_WSDL_Provider_MathOperations_ws_ProviderMath_Port" binding="tns:wsSOAP_WSDL_Provider_MathOperations_ws_ProviderMath_Binder">
+                  
+            <soap:address location="http://localhost:5555/ws/wsSOAP_WSDL.Provider_MathOperations.ws:ProviderMath/wsSOAP_WSDL_Provider_MathOperations_ws_ProviderMath_Port"/>
+                
+        </wsdl:port>
+          
+    </wsdl:service>
+    
+</wsdl:definitions>
